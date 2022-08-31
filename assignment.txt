@@ -1,0 +1,23 @@
+1. # R+ = read then write
+   x=open("wow.txt","r+")
+   print(x.tell())
+   data=x.read()
+   x.write(". ok checking new thing")
+   print(data)
+
+2.# W+= writing then reading by doing overwrite
+  x=open("wow.txt","w+")
+  print(x.tell())
+  x.write("again writing")
+  print(x.tell())
+  x.seek(0)
+  data=x.read()
+  print(data)
+
+3.# A+=appending and reading
+  x=open("wow.txt","a+")
+  print(x.tell())
+  x.write(". again wanna see")
+  x.seek(0)
+  data=x.read()
+  print(data)
